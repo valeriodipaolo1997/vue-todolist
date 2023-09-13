@@ -13,10 +13,10 @@
         <div id="app" class="container">
             <div>
                 <ul>
-                    <li v-for="toDo in toDoList">
+                    <li v-for="(toDo, index) in toDoList" class="w-50">
                         <div class="d-flex justify-content-between">
                             <span :class="toDo.done ? 'text-decoration-line-through' : '' ">{{toDo.text}}</span>
-                            
+                            <button @click="removeToDo(index)">X</button>
                         </div>
                     </li>
                 </ul>
