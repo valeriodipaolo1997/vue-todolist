@@ -19,7 +19,7 @@ createApp({
         return {
 
             
-
+            newTask: '',
             toDoList: [
                 {
                     text: 'Farina',
@@ -45,6 +45,13 @@ createApp({
     methods: {
         removeToDo (index) {
             this.toDoList.splice([index],1)
+        },
+
+        addTask () {
+            this.toDoList.push({
+                text:this.newTask,
+                done:false,
+            })
         }
     }
 }).mount('#app')

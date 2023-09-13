@@ -11,6 +11,10 @@
     <body>
 
         <div id="app" class="container">
+            <div class="new-Task">
+                <input v-model="newTask" type="text">
+                <button @click="addTask">aggiungi</button>
+            </div>
             <div>
                 <ul>
                     <li v-for="(toDo, index) in toDoList" class="w-50">
